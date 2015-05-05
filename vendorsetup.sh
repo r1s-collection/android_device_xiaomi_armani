@@ -1,1 +1,1 @@
-add_lunch_combo candy_armani-userdebug
+add_lunch_combo candy5_armani-userdebug

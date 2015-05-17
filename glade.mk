@@ -14,4 +14,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Copy device specific prebuilt files.
 PRODUCT_COPY_FILES += \
-    vendor_glade/prebuilts/common/bootanimation/720.zip:system/media/bootanimation.zip
+    vendor/glade/prebuilts/common/bootanimation/720.zip:system/media/bootanimation.zip

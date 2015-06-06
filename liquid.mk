@@ -1,5 +1,5 @@
 # Inherit some common Liquid stuff
-$(call inherit-product, vendor/liquid/config/common_full_phone.mk)
+$(call inherit-product, vendor/liquid/config/common_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/armani/full_armani.mk)

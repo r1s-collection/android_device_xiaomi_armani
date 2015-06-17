@@ -1,1 +1,1 @@
-add_lunch_combo infinitive_armani-userdebug
+add_lunch_combo io_armani-userdebug

@@ -1,0 +1,26 @@
+[
+  {
+    "remote":      "github",
+    "repository":  "armani-dev/android_kernel_xiaomi_armani",
+    "target_path": "kernel/xiaomi/armani",
+    "revision":    "cm-12.1"
+  },
+  {
+    "remote":      "github",
+    "repository":  "armani-dev/proprietary_vendor_xiaomi",
+    "target_path": "vendor/xiaomi",
+    "revision":    "cm-12.1"
+  },
+  {
+    "remote":      "github",
+    "repository":  "CyanogenMod/android_device_qcom_common",
+    "target_path": "device/qcom/common",
+    "revision":    "cm-12.1"
+  },
+  {
+    "remote":      "github",
+    "repository":  "CyanogenMod/android_hardware_qcom_fm",
+    "target_path": "hardware/qcom/fm",
+    "revision":    "cm-12.1"
+  }
+]

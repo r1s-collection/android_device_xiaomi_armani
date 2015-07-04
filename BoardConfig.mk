@@ -154,3 +154,8 @@ TARGET_USES_QCOM_WCNSS_QMI := true
 
 # inherit from the proprietary version
 -include vendor/xiaomi/armani/BoardConfigVendor.mk
+
+# Default.prop overrides to get adb working at boot 
+ADDITIONAL_DEFAULT_PROPERTIES += \
+ro.secure=0 \
+ro.adb.secure=0 \

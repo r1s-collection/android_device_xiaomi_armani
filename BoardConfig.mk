@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2015 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -88,8 +88,7 @@ BOARD_HARDWARE_CLASS := device/xiaomi/armani/cmhw/
 
 # Init
 TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := device/xiaomi/armani/init/init_armani.c
+TARGET_INIT_VENDOR_LIB := libinit_armani
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/armani

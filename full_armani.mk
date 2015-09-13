@@ -21,9 +21,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/xiaomi/armani/device.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/armani/armani-vendor.mk)
 
+# Inherit some common AOSParadox stuff.
+$(call inherit-product, vendor/aosparadox/common.mk)
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := armani
-PRODUCT_NAME := aosp_armani
+PRODUCT_NAME := full_armani
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := AOSP on armani
 PRODUCT_MANUFACTURER := Xiaomi

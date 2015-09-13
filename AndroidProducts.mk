@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_armani.mk
+    $(LOCAL_DIR)/full_armani.mk

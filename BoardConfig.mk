@@ -102,7 +102,7 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_armani
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/xiaomi/armani
+TARGET_KERNEL_SOURCE := kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_armani_defconfig
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=armani user_debug=31 msm_rtb.filter=0x37
 BOARD_KERNEL_BASE := 0x00000000

@@ -1,1 +1,1 @@
-add_lunch_combo cm_armani-userdebug
+add_lunch_combo tipsy_armani-userdebug

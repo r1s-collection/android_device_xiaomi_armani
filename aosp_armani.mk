@@ -34,4 +34,6 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=armani
+    PRODUCT_NAME=armani \
+    BUILD_FINGERPRINT="Xiaomi/armani/armani:4.4.4/KTU84P/V7.1.1.0.KHCMICK:user/release-keys" \
+    PRIVATE_BUILD_DESC="armani-user 4.4.4 KTU84P V7.1.1.0.KHCMICK release-keys"

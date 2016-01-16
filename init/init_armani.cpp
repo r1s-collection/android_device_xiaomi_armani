@@ -1,5 +1,5 @@
 /*
-   Copyright (c) 2015, The Linux Foundation. All rights reserved.
+   Copyright (c) 2016, The Linux Foundation. All rights reserved.
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -67,7 +67,6 @@ static int read_file2(const char *fname, char *data, int max_size)
 
 void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
 {
-    char platform[PROP_VALUE_MAX];
     int rc;
     unsigned long raw_id = -1;
 
@@ -75,20 +74,11 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     UNUSED(msm_ver);
     UNUSED(board_type);
 
-    rc = property_get("ro.board.platform", platform);
-    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
-        return;
-
     /* get raw ID */
     rc = read_file2(RAW_ID_PATH, tmp, sizeof(tmp));
     if (rc) {
         raw_id = strtoul(tmp, NULL, 0);
     }
-
-    property_set("ro.product.device", "armani");
-    property_set("ro.build.product", "armani");
-    property_set("ro.build.description", "armani-user 4.4.4 KTU84P V7.1.1.0.KHCMICK release-keys");
-    property_set("ro.build.fingerprint", "Xiaomi/armani/armani:4.4.4/KTU84P/V7.1.1.0.KHCMICK:user/release-keys");
 
     /* HM 1SW  */
     if (raw_id==2325) {

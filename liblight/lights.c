@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008 The Android Open Source Project.
+ * Copyright (C) 2016 The Android Open Source Project.
  * Copyright (C) 2012-2014, The Linux Foundation. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");

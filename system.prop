@@ -51,3 +51,7 @@ ro.telephony.ril.config=simactivation
 # WFD
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+ 
+#Navbar Buttons
+qemu.hw.mainkeys=0
+

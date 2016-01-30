@@ -94,6 +94,10 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_CUSTOM_BOOTIMG_MK := device/xiaomi/armani/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
+# Kernel Toolchain
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-5.3/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+
 # Keymaster
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 

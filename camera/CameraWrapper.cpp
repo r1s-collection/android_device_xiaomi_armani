@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016, The CyanogenMod Project
+ * Copyright (C) 2012-2015, The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -107,12 +107,6 @@ static char *camera_fixup_getparams(int id, const char *settings)
     params.dump();
 #endif
 
-    /* Remove HDR mode in front camera */
-    if (id == 1) {
-        params.set(android::CameraParameters::KEY_SUPPORTED_SCENE_MODES,
-            "auto,asd,landscape,snow,beach,sunset,night,portrait,backlight,sports,steadyphoto,flowers,candlelight,fireworks,party,night-portrait,theatre,action,AR");
-    }
-
 #if !LOG_NDEBUG
     ALOGV("%s: fixed parameters:", __FUNCTION__);
     params.dump();
@@ -147,25 +141,20 @@ static char *camera_fixup_setparams(int id, const char *settings)
 
     /* Disable ZSL and HDR snapshots in video mode */
     if (videoMode) {
-        params.set(android::CameraParameters::KEY_QC_ZSL, "off");
+        params.set("zsl", "off");
         if (hdrMode) {
             params.set(android::CameraParameters::KEY_SCENE_MODE, "auto");
         }
     } else {
-        params.set(android::CameraParameters::KEY_QC_TOUCH_AF_AEC, "touch-on");
-        params.set(android::CameraParameters::KEY_QC_ZSL, "on");
+        params.set("zsl", "on");
     }
 
     /* Enable Morpho EasyHDR and disable flash in HDR mode */
     if (hdrMode && !videoMode) {
-        params.set(android::CameraParameters::KEY_QC_MORPHO_HDR, "true");
-        params.set(android::CameraParameters::KEY_QC_AE_BRACKET_HDR, "AE-Bracket");
-        params.set(android::CameraParameters::KEY_QC_CAPTURE_BURST_EXPOSURE, "-6,8,0");
+        params.set("morpho-hdr", "true");
         params.set(android::CameraParameters::KEY_FLASH_MODE, android::CameraParameters::FLASH_MODE_OFF);
     } else {
-        params.set(android::CameraParameters::KEY_QC_MORPHO_HDR, "false");
-        params.set(android::CameraParameters::KEY_QC_AE_BRACKET_HDR, "Off");
-        params.set(android::CameraParameters::KEY_QC_CAPTURE_BURST_EXPOSURE, "0,0,0");
+        params.set("morpho-hdr", "false");
     }
 
 #if !LOG_NDEBUG

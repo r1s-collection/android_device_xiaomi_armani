@@ -92,12 +92,26 @@ TARGET_UNIFIED_DEVICE := true
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/armani
-TARGET_KERNEL_CONFIG := cyanogenmod_armani_defconfig
+TARGET_KERNEL_CONFIG := vajjo_armani_defconfig
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=armani zcache.enabled=1
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_DTBTOOL_ARGS := --force-v2
+
+# Kernel Toolchain
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9-uber/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+
+# Rom Toolchain
+TARGET_GCC_VERSION_EXP := 4.9-uber
+
+# Turbo UBER Additions
+CLANG_O3 := true
+STRICT_ALIASING := true
+KRAIT_TUNINGS := false
+GRAPHITE_OPTS := true
+ENABLE_GCCONLY := true
 
 # Keymaster
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true

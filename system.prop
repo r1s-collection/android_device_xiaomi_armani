@@ -43,3 +43,8 @@ persist.radio.multisim.config=dsds
 persist.radio.rat_on=combine
 ro.telephony.call_ring.multiple=false
 ro.telephony.ril.config=simactivation
+
+# Strcit Mode
+persist.sys.strictmode.visual=0
+persist.sys.strictmode.disable=1
+

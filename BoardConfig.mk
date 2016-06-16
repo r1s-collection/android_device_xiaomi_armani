@@ -106,6 +106,13 @@ KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 # Rom Toolchain
 TARGET_GCC_VERSION_EXP := 5.3
 
+# Turbo UBER Additions
+CLANG_O3 := true
+STRICT_ALIASING := true
+KRAIT_TUNINGS := false
+GRAPHITE_OPTS := true
+ENABLE_GCCONLY := true
+
 # Keymaster
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
